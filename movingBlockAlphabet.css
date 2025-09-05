@@ -1,0 +1,3578 @@
+:root {
+    --boxColor: #89ECFF;
+    --daytime: 
+        radial-gradient(closest-side,#f6ff00a3, transparent),
+        linear-gradient(180deg, #00bbff, #0080ff, #00bbff);
+    --nighttime: 
+        radial-gradient(closest-side, #ffffffa4, transparent, transparent, #00000092),
+        linear-gradient(180deg, #1b1b1b, #000000, #1b1b1b);
+    --Height: .325em;
+    --Width: .325em;
+    --Depth: .125em;
+    --Perspective: 2em;
+    --animationMaxTime: 2s;
+}
+#movingBlockHero {
+    width: 100%;
+    min-height: 35dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+#movingBlockHero .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 25dvh;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    gap: 2.5%;
+    flex-wrap: wrap;
+}
+
+.hero {
+    width: 100%;
+    perspective: 10em;
+    perspective-origin: 35% calc(50% - 2.5em);
+}
+
+.scene {
+    height: 100%;
+    width: 100%;
+}
+
+.character {
+    width: 33%;
+    max-width: 100px;
+}
+
+.scene,
+.container,
+.character {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.floor {
+    position: absolute;
+    top: 1em;
+    transform: 
+        translate(-50%, -50%)
+        rotateX(90deg);
+    width: 250em;
+    height: 250em;
+    background: 
+        radial-gradient(#0000, #000 75%),
+        #4e4e4e;
+    background-size:100%, 1em 1em;
+
+}
+
+.block {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translate3d(calc(var(--x, 4) * 1vmin ), calc(var(--y, 5) * 1vmin), calc(var(--z, 0) * 1vmin)) rotateX(calc(var(--rotate-cuboid-x, 0) * 1deg)) rotateY(calc(var(--rotate-cuboid-y, 0) * 1deg)) rotateZ(calc(var(--rotate-cuboid-z, 0) * 1deg));
+}
+
+.side {
+    position: absolute;
+    background: var(--boxColor);
+    backface-visibility: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5% 2.5%;
+    flex-wrap: wrap;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, 0.25) inset;
+}
+
+.front,
+.back {
+    --coefficient: 0.5;
+    --rotation: 0deg;
+    height: var(--Height);
+    width: var(--Width);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateY(var(--rotation)) translate3d(0, 0, calc(var(--Depth) * var(--coefficient)));
+}
+
+.back {
+    --rotation: 180deg;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, 0.75) inset;
+}
+
+
+.left,
+.right {
+    --rotation: -90deg;
+    height: var(--Height);
+    width: var(--Depth);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateY(var(--rotation)) translate3d(0, 0, calc(var(--Width) * 0.5));
+    box-shadow: 0 0 .25em rgba(0, 0, 0, 0.75) inset;
+}
+
+.right {
+    --rotation: 90deg;
+}
+
+.top,
+.bottom {
+    --rotation: 90deg;
+    height: var(--Depth);
+    width: var(--Width);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(var(--rotation)) translate3d(0, 0, calc(var(--Height) * 0.5)) ;
+}
+
+.bottom {
+    --rotation: -90deg;
+}
+
+.letterA {
+    .blockA1 {
+        animation: blockA1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA2 {
+        animation: blockA2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA3 {
+        animation: blockA3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA4 {
+        animation: blockA4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA5 {
+        animation: blockA5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA6 {
+        animation: blockA6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA7 {
+        animation: blockA7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA8 {
+        animation: blockA8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA9 {
+        animation: blockA9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA10 {
+        animation: blockA10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA11 {
+        animation: blockA11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA12 {
+        animation: blockA12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA13 {
+        animation: blockA13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA14 {
+        animation: blockA14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA15 {
+        animation: blockA15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockA16 {
+        animation: blockA16 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockA1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2)  * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockA2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockA3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2)  * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockA4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockA5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2)  * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockA6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockA7 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockA8 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockA9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockA10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2)  * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockA11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockA12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2)  * -1), calc((var(--Height) * 2)  * -1), var(--Perspective));}
+}
+
+@keyframes blockA13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2)  * -1), var(--Perspective));}
+}
+
+@keyframes blockA14 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2)  * -1), var(--Perspective));}
+}
+
+@keyframes blockA15 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2)  * -1), var(--Perspective));}
+}
+
+@keyframes blockA16 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2)  * -1), var(--Perspective));}
+}
+
+.letterB {
+    .blockB1 {
+        animation: blockB1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB2 {
+        animation: blockB2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB3 {
+        animation: blockB3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB4 {
+        animation: blockB4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB5 {
+        animation: blockB5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB6 {
+        animation: blockB6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB7 {
+        animation: blockB7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB8 {
+        animation: blockB8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB9 {
+        animation: blockB9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB10 {
+        animation: blockB10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB11 {
+        animation: blockB11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB12 {
+        animation: blockB12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB13 {
+        animation: blockB13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB14 {
+        animation: blockB14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB15 {
+        animation: blockB15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockB16 {
+        animation: blockB16 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockB1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockB2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockB3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockB4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockB5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockB6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockB7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockB8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockB9 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockB10 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockB11 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockB12 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockB13 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockB14 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockB15 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockB16 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+ 
+.letterC {
+    .blockC1 {
+        animation: blockC1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC2 {
+        animation: blockC2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC3 {
+        animation: blockC3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC4 {
+        animation: blockC4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC5 {
+        animation: blockC5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC6 {
+        animation: blockC6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC7 {
+        animation: blockC7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC8 {
+        animation: blockC8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC9 {
+        animation: blockC9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC10 {
+        animation: blockC10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC11 {
+        animation: blockC11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC12 {
+        animation: blockC12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockC13 {
+        animation: blockC13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockC1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockC2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockC3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockC4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockC5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockC6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockC7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockC8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockC9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockC10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockC11 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockC12 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockC13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterD {
+    .blockD1 {
+        animation: blockD1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD2 {
+        animation: blockD2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD3 {
+        animation: blockD3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD4 {
+        animation: blockD4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD5 {
+        animation: blockD5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD6 {
+        animation: blockD6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD7 {
+        animation: blockD7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD8 {
+        animation: blockD8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD9 {
+        animation: blockD9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD10 {
+        animation: blockD10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD11 {
+        animation: blockD11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD12 {
+        animation: blockD12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD13 {
+        animation: blockD13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockD14 {
+        animation: blockD14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockD1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockD2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockD3 {
+    0% {}
+    100% {transform: translate3d( 0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockD4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockD5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockD6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockD7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockD8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockD9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockD10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockD11 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockD12 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockD13 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective)
+);}
+}
+
+@keyframes blockD14 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective)
+);}
+}
+
+
+.letterE {
+    .blockE1 {
+        animation: blockE1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE2 {
+        animation: blockE2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE3 {
+        animation: blockE3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE4 {
+        animation: blockE4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE5 {
+        animation: blockE5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE6 {
+        animation: blockE6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE7 {
+        animation: blockE7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE8 {
+        animation: blockE8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE9 {
+        animation: blockE9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE10 {
+        animation: blockE10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE11 {
+        animation: blockE11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE12 {
+        animation: blockE12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE13 {
+        animation: blockE13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE14 {
+        animation: blockE14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockE15 {
+        animation: blockE15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockE1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockE2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockE3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockE4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockE5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockE6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockE7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockE8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockE9 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockE10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockE11 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockE12 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockE13 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockE14 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockE15 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+
+.letterF {
+    .blockF1 {
+        animation: blockF1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF2 {
+        animation: blockF2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF3 {
+        animation: blockF3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF4 {
+        animation: blockF4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF5 {
+        animation: blockF5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF6 {
+        animation: blockF6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF7 {
+        animation: blockF7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF8 {
+        animation: blockF8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF9 {
+        animation: blockF9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF10 {
+        animation: blockF10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockF11 {
+        animation: blockF11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockF1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockF2 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockF3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockF4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockF5 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective)
+);}
+}
+
+@keyframes blockF6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockF7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockF8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockF9 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockF10 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockF11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterG {
+    .blockG1 {
+        animation: blockG1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG2 {
+        animation: blockG2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG3 {
+        animation: blockG3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG4 {
+        animation: blockG4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG5 {
+        animation: blockG5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG6 {
+        animation: blockG6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG7 {
+        animation: blockG7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG8 {
+        animation: blockG8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG9 {
+        animation: blockG9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG10 {
+        animation: blockG10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG11 {
+        animation: blockG11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG12 {
+        animation: blockG12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG13 {
+        animation: blockG13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG14 {
+        animation: blockG14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG15 {
+        animation: blockG15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG16 {
+        animation: blockG16 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockG17 {
+        animation: blockG17 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockG1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockG2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockG3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockG4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockG5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockG6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockG7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockG8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockG9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockG10 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockG11 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockG12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockG13 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockG14 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockG15 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockG16 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockG17 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterH {
+    .blockH1 {
+    animation: blockH1 var(--animationMaxTime);
+    animation-fill-mode: forwards;
+    }
+
+    .blockH2 {
+        animation: blockH2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH3 {
+        animation: blockH3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH4 {
+        animation: blockH4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH5 {
+        animation: blockH5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH6 {
+        animation: blockH6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH7 {
+        animation: blockH7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH8 {
+        animation: blockH8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH9 {
+        animation: blockH9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH10 {
+        animation: blockH10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH11 {
+        animation: blockH11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH12 {
+        animation: blockH12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockH13 {
+        animation: blockH13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockH1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockH2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockH3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockH4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockH5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockH6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockH7 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockH8 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockH9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockH10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockH11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockH12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockH13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterI {
+    .blockI1 {
+        animation: blockI1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI2 {
+        animation: blockI2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI3 {
+        animation: blockI3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI4 {
+        animation: blockI4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI5 {
+        animation: blockI5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI6 {
+        animation: blockI6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI7 {
+        animation: blockI7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI8 {
+        animation: blockI8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI9 {
+        animation: blockI9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI10 {
+        animation: blockI10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI11 {
+        animation: blockI11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI12 {
+        animation: blockI12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockI13 {
+        animation: blockI13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockI1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockI2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockI3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockI4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockI5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockI6 {
+    0% {}
+    100% {transform: translate3d(0, var(--Height), var(--Perspective));}
+}
+
+@keyframes blockI7 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockI8 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * -1), var(--Perspective)
+);}
+}
+
+@keyframes blockI9 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective)
+);}
+}
+
+@keyframes blockI10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockI11 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockI12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockI13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterJ {
+    .blockJ1 {
+        animation: blockJ1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ2 {
+        animation: blockJ2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ3 {
+        animation: blockJ3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ4 {
+        animation: blockJ4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ5 {
+        animation: blockJ5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ6 {
+        animation: blockJ6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ7 {
+        animation: blockJ7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ8 {
+        animation: blockJ8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ9 {
+        animation: blockJ9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ10 {
+        animation: blockJ10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ11 {
+        animation: blockJ11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ12 {
+        animation: blockJ12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockJ13 {
+        animation: blockJ13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockJ1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockJ2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockJ3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockJ4 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockJ5 {
+    0% {}
+    100% {transform: translate3d(0, var(--Height), var(--Perspective));}
+}
+
+@keyframes blockJ6 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockJ7 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * -1), var(--Perspective)
+);}
+}
+
+@keyframes blockJ8 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective)
+);}
+}
+
+@keyframes blockJ9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockJ10 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockJ11 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockJ12 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+
+.letterK {
+    .blockK1 {
+        animation: blockK1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK2 {
+        animation: blockK2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK3 {
+        animation: blockK3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK4 {
+        animation: blockK4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK5 {
+        animation: blockK5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK6 {
+        animation: blockK6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK7 {
+        animation: blockK7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK8 {
+        animation: blockK8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK9 {
+        animation: blockK9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK10 {
+        animation: blockK10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockK11 {
+        animation: blockK11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockK1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockK2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockK3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockK4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockK5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockK6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockK7 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockK8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockK9 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockK10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective)
+);}
+}
+
+@keyframes blockK11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterL {
+    .blockL1 {
+        animation: blockL1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL2 {
+        animation: blockL2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL3 {
+        animation: blockL3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL4 {
+        animation: blockL4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL5 {
+        animation: blockL5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL6 {
+        animation: blockL6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL7 {
+        animation: blockL7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL8 {
+        animation: blockL8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockL9 {
+        animation: blockL9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockL1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockL2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockL3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockL4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockL5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockL6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockL7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockL8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockL9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterM {
+    .blockM1 {
+        animation: blockM1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM2 {
+        animation: blockM2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM3 {
+        animation: blockM3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM4 {
+        animation: blockM4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM5 {
+        animation: blockM5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM6 {
+        animation: blockM6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM7 {
+        animation: blockM7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM8 {
+        animation: blockM8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM9 {
+        animation: blockM9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM10 {
+        animation: blockM10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM11 {
+        animation: blockM11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM12 {
+        animation: blockM12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockM13 {
+        animation: blockM13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockM1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockM2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockM3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockM4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockM5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockM6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockM7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockM8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockM9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockM10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockM11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockM12 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockM13 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+.letterN {
+    .blockN1 {
+    animation: blockN1 var(--animationMaxTime);
+    animation-fill-mode: forwards;
+    }
+
+    .blockN2 {
+        animation: blockN2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN3 {
+        animation: blockN3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN4 {
+        animation: blockN4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN5 {
+        animation: blockN5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN6 {
+        animation: blockN6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN7 {
+        animation: blockN7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN8 {
+        animation: blockN8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN9 {
+        animation: blockN9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN10 {
+        animation: blockN10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN11 {
+        animation: blockN11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN12 {
+        animation: blockN12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockN13 {
+        animation: blockN13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockN1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockN2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockN3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockN4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockN5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockN6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockN7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockN8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockN9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockN10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockN11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockN12 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockN13 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective));}
+}
+
+.letterO {
+    .blockO1 {
+    animation: blockO1 var(--animationMaxTime);
+    animation-fill-mode: forwards;
+    }
+
+    .blockO2 {
+        animation: blockO2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO3 {
+       animation: blockO3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO4 {
+        animation: blockO4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO5 {
+        animation: blockO5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO6 {
+        animation: blockO6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO7 {
+        animation: blockO7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO8 {
+        animation: blockO8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO9 {
+        animation: blockO9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO10 {
+        animation: blockO10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO11 {
+        animation: blockO11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO12 {
+        animation: blockO12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO13 {
+        animation: blockO13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO14 {
+        animation: blockO14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO15 {
+        animation: blockO15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockO16 {
+        animation: blockO16 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockO1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockO2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockO3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockO4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockO5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockO6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockO7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockO8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockO9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockO10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockO11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockO12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockO13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockO14 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockO15 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockO16 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterP {
+    .blockP1 {
+        animation: blockP1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP2 {
+        animation: blockP2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP3 {
+        animation: blockP3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP4 {
+        animation: blockP4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP5 {
+        animation: blockP5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP6 {
+        animation: blockP6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP7 {
+        animation: blockP7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP8 {
+        animation: blockP8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP9 {
+        animation: blockP9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP10 {
+        animation: blockP10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP11 {
+        animation: blockP11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockP12 {
+        animation: blockP12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockP1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockP2 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockP3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockP4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockP5 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockP6 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective)
+);}
+}
+
+@keyframes blockP7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockP8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockP9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockP10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockP11 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockP12 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective)
+);}
+}
+
+.letterQ {
+    .blockQ1 {
+        animation: blockQ1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ2 {
+        animation: blockQ2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ3 {
+        animation: blockQ3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ4 {
+        animation: blockQ4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ5 {
+        animation: blockQ5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ6 {
+        animation: blockQ6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ7 {
+        animation: blockQ7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ8 {
+        animation: blockQ8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ9 {
+        animation: blockQ9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ10 {
+        animation: blockQ10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ11 {
+        animation: blockQ11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ12 {
+        animation: blockQ12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ13 {
+        animation: blockQ13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ14 {
+        animation: blockQ14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ15 {
+        animation: blockQ15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockQ16 {
+        animation: blockQ16 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockQ1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockQ2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockQ3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockQ4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockQ5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockQ6 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockQ7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockQ8 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockQ9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockQ10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockQ11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockQ12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockQ13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockQ14 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockQ15 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockQ16 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterR {
+    .blockR1 {
+        animation: blockR1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR2 {
+        animation: blockR2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR3 {
+        animation: blockR3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR4 {
+        animation: blockR4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR5 {
+        animation: blockR5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR6 {
+        animation: blockR6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR7 {
+        animation: blockR7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR8 {
+        animation: blockR8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR9 {
+        animation: blockR9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR10 {
+        animation: blockR10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR11 {
+        animation: blockR11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR12 {
+        animation: blockR12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR13 {
+        animation: blockR13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR14 {
+        animation: blockR14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockR15 {
+        animation: blockR15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockR1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockR2 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockR3 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockR4 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockR5 {
+    0% {}
+    100% {transform: translate3d(0, var(--Height), var(--Perspective));}
+}
+
+@keyframes blockR6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockR7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockR8 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockR9 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockR10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockR11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockR12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockR13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockR14 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockR15 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterS {
+    .blockS1 {
+        animation: blockS1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS2 {
+        animation: blockS2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS3 {
+        animation: blockS3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS4 {
+        animation: blockS4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS5 {
+        animation: blockS5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS6 {
+        animation: blockS6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS7 {
+        animation: blockS7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS8 {
+        animation: blockS8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS9 {
+        animation: blockS9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS10 {
+        animation: blockS10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS11 {
+        animation: blockS11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS12 {
+        animation: blockS12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS13 {
+        animation: blockS13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS14 {
+        animation: blockS14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS15 {
+        animation: blockS15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS16 {
+        animation: blockS16 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockS17 {
+        animation: blockS17 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockS1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockS2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockS3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockS4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockS5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockS6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockS7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockS8 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockS9 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockS10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockS11 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockS12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockS13 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockS14 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockS15 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockS16 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockS17 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterT {
+    .blockT1 {
+    animation: blockT1 var(--animationMaxTime);
+    animation-fill-mode: forwards;
+}
+
+    .blockT2 {
+        animation: blockT2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT3 {
+        animation: blockT3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT4 {
+        animation: blockT4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT5 {
+        animation: blockT5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT6 {
+        animation: blockT6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT7 {
+        animation: blockT7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT8 {
+        animation: blockT8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+
+    .blockT9 {
+        animation: blockT9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockT1 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockT2 {
+    0% {}
+    100% {transform: translate3d(0, var(--Height), var(--Perspective));}
+}
+
+@keyframes blockT3 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockT4 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockT5 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockT6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockT7 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockT8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockT9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterU {
+    .blockU1 {
+        animation: blockU1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU2 {
+        animation: blockU2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU3 {
+        animation: blockU3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU4 {
+        animation: blockU4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU5 {
+        animation: blockU5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU6 {
+        animation: blockU6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU7 {
+        animation: blockU7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU8 {
+        animation: blockU8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU9 {
+        animation: blockU9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU10 {
+        animation: blockU10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU11 {
+        animation: blockU11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU12 {
+        animation: blockU12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockU13 {
+        animation: blockU13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockU1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockU2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockU3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockU4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockU5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockU6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockU7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockU8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockU9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockU10 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockU11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockU12 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockU13 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterV {
+    .blockV1 {
+        animation: blockV1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV2 {
+        animation: blockV2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV3 {
+        animation: blockV3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV4 {
+        animation: blockV4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV5 {
+        animation: blockV5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV6 {
+        animation: blockV6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV7 {
+        animation: blockV7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV8 {
+        animation: blockV8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockV9 {
+        animation: blockV9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockV1 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockV2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockV3 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockV4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockV5 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockV6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockV7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockV8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockV9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterW {
+    .blockW1 {
+        animation: blockW1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW2 {
+        animation: blockW2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW3 {
+        animation: blockW3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW4 {
+        animation: blockW4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW5 {
+        animation: blockW5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW6 {
+        animation: blockW6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW7 {
+        animation: blockW7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW8 {
+        animation: blockW8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW9 {
+        animation: blockW9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW10 {
+        animation: blockW10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW11 {
+        animation: blockW11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW12 {
+        animation: blockW12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockW13 {
+        animation: blockW13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockW1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockW2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockW3 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockW4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockW5 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockW6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes blockW7 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockW8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockW9 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockW10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockW11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockW12 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockW13 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+.letterX {
+    .blockX1 {
+        animation: blockX1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX2 {
+        animation: blockX2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX3 {
+        animation: blockX3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX4 {
+        animation: blockX4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX5 {
+        animation: blockX5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX6 {
+        animation: blockX6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX7 {
+        animation: blockX7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX8 {
+        animation: blockX8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockX9 {
+        animation: blockX9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockX1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockX2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockX3 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockX4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockX5 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockX6 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockX7 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockX8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockX9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterY {
+    .blockY1 {
+        animation: blockY1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY2 {
+        animation: blockY2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY3 {
+        animation: blockY3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY4 {
+        animation: blockY4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY5 {
+        animation: blockY5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY6 {
+        animation: blockY6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY7 {
+        animation: blockY7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY8 {
+        animation: blockY8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockY9 {
+        animation: blockY9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+ @keyframes blockY1 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockY2 {
+    0% {}
+    100% {transform: translate3d(0, var(--Height), var(--Perspective));}
+}
+
+@keyframes blockY3 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockY4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockY5 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockY6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockY7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockY8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockY9 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.letterZ {
+    .blockZ1 {
+        animation: blockZ1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ2 {
+        animation: blockZ2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ3 {
+        animation: blockZ3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ4 {
+        animation: blockZ4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ5 {
+        animation: blockZ5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ6 {
+        animation: blockZ6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ7 {
+        animation: blockZ7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ8 {
+        animation: blockZ8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ9 {
+        animation: blockZ9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ10 {
+        animation: blockZ10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ11 {
+        animation: blockZ11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ12 {
+        animation: blockZ12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ13 {
+        animation: blockZ13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ14 {
+        animation: blockZ14 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .blockZ15 {
+        animation: blockZ15 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes blockZ1 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) *  2), var(--Perspective));}
+}
+
+@keyframes blockZ2 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockZ3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockZ4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockZ5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes blockZ6 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), var(--Height), var(--Perspective));}
+}
+
+@keyframes blockZ7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), 0, var(--Perspective));}
+}
+
+@keyframes blockZ8 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes blockZ9 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes blockZ10 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes blockZ11 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockZ12 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockZ13 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockZ14 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes blockZ15 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.space {
+    width: calc(var(--Height) * 2);
+}
+
+/* Make punctuation */
+
+.comma {
+    .commaBlock1 {
+        animation: commaBlock1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock2 {
+        animation: commaBlock2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock3 {
+        animation: commaBlock3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock4 {
+        animation: commaBlock4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock5 {
+        animation: commaBlock5 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock6 {
+        animation: commaBlock6 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock7 {
+        animation: commaBlock7 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock8 {
+        animation: commaBlock8 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock9 {
+        animation: commaBlock9 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock10 {
+        animation: commaBlock10 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock11 {
+        animation: commaBlock11 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock12 {
+        animation: commaBlock12 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .commaBlock13 {
+        animation: commaBlock13 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes commaBlock1 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes commaBlock2 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes commaBlock3 {
+    0% {}
+    100% {transform: translate3d(0, var(--Height), var(--Perspective));}
+}
+
+@keyframes commaBlock4 {
+    0% {}
+    100% {transform: translate3d(var(--Height), var(--Height), var(--Perspective)
+);}
+}
+
+@keyframes commaBlock5 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes commaBlock6 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes commaBlock7 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), 0, var(--Perspective));}
+}
+
+@keyframes commaBlock8 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes commaBlock9 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes commaBlock10 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes commaBlock11 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes commaBlock12 {
+    0% {}
+    100% {transform: translate3d()0, calc((var(--Height) * 2) * -1), var(--Perspective);}
+}
+
+@keyframes commaBlock13 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.exclamation {
+    .exclamationBlock1 {
+        animation: exclamationBlock1 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .exclamationBlock2 {
+        animation: exclamationBlock2 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .exclamationBlock3 {
+        animation: exclamationBlock3 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+    .exclamationBlock4 {
+        animation: exclamationBlock4 var(--animationMaxTime);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes exclamationBlock1 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * 2), var(--Perspective));}
+}
+
+@keyframes exclamationBlock2 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes exclamationBlock3 {
+    0% {}
+    100% {transform: translate3d(0, calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes exclamationBlock4 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+.question {
+    .questionBlock1 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock2 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock3 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock4 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock5 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock6 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock7 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+    .questionBlock8 {
+        animation: questionBlock1 var(--animationMaxTime) forwards;
+    }
+}
+
+@keyframes questionBlock1 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes questionBlock2 {
+    0% {}
+    100% {transform: translate3d(0, 0, var(--Perspective));}
+}
+
+@keyframes questionBlock3 {
+    0% {}
+    100% {transform: translate3d(var(--Height), 0, var(--Perspective));}
+}
+
+@keyframes questionBlock4 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * 2), calc(var(--Height) * -1), var(--Perspective));}
+}
+
+@keyframes questionBlock5 {
+    0% {}
+    100% {transform: translate3d(calc(var(--Height) * -1), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes questionBlock6 {
+    0% {}
+    100% {transform: translate3d(0, calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes questionBlock7 {
+    0% {}
+    100% {transform: translate3d(var(--Height), calc((var(--Height) * 2) * -1), var(--Perspective));}
+}
+
+@keyframes questionBlock8 {
+    0% {}
+    100% {transform: translate3d(calc((var(--Height) * 2) * -1), calc(var(--Height) * -1), var(--Perspective));}
+}
